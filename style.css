@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  user-select: none;
+}
+:root {
+  --light-blue: #509dff;
+  --sky-blue: #5c67e2;
+  --blue: #1e1ebf;
+  --blue2: #5d69e3;
+  --navy-blue: #0a0e30;
+  --light-nevy: #1c2040;
+  --white: #ffffff;
+  --light-gray: #6e7088;
+
+  --border-radious: 0.5rem;
+}
+
+body {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  width: 400px;
+  height: 600px;
+  background-color: var(--navy-blue);
+  padding: 1.3rem 1.5rem;
+  border-radius: 0.8rem;
+}
+
+.container h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #dedce8db;
+  text-align: center;
+}
+.password-box {
+  background-color: var(--light-nevy);
+  margin-top: 1.2rem;
+  height: 65px;
+  border-radius: var(--border-radious);
+  position: relative;
+}
+.password-box input {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radious);
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+.password-box input::placeholder {
+  font-size: 14px;
+}
+.password-box input.result {
+  color: #6e7088;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.password-box span {
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  color: var(--light-gray);
+  display: none;
+}
+.range-box p {
+  color: var(--light-gray);
+  font-size: 14px;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+.range-box p span {
+  color: var(--white);
+}
+.range-box {
+  margin-top: 10px;
+}
+.input-range {
+  margin-top: 2px;
+  background-color: var(--light-nevy);
+  padding: 15px 10px;
+  border-radius: var(--border-radious);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--white);
+}
+.input-range input {
+  flex: 1;
+  height: 3px;
+}
+
+.setting {
+  margin-top: 10px;
+}
+.setting span {
+  color: var(--light-gray);
+  text-transform: uppercase;
+}
+.toggle-box {
+  background-color: var(--light-nevy);
+  border-radius: var(--border-radious);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  margin-top: 5px;
+}
+.toggle-box label {
+  color: var(--white);
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+.toggle-box input {
+  appearance: none;
+  width: 50px;
+  height: 30px;
+  background-color: var(--light-gray);
+  border-radius: 30px;
+  position: relative;
+}
+.toggle-box input::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--white);
+  border-radius: 50%;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%) scale(1.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.toggle-box input:checked {
+  background-color: var(--blue2);
+}
+.toggle-box input:checked::before {
+  left: 23px;
+}
+.btn-box {
+  margin-top: 10px;
+  border-radius: var(--border-radious);
+  text-align: center;
+  background: linear-gradient(to right, #6877eb, #8373dc, #8250c4);
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  height: 60px;
+}
+.btn-box button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+.btn-box:active {
+  transform: translateY(3%);
+}
+
+@media screen and (width <= 500px) {
+  body {
+    background-color: #0a0e30;
+    background-image: none;
+  }
+  .container {
+    border-radius: 0px;
+  }
+  .toggle-box {
+    margin-top: 10px;
+  }
+  .setting {
+    margin-top: 20px;
+  }
+}

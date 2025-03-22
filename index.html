@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>Password Generator</h2>
+
+        <!-- Password Box; -->
+        <article class="password-box">
+            <input type="text" placeholder="Select Type of your password" id="result">
+            <span id="copy-btn">Click to copy</span>
+        </article>
+
+        <!--  Range Input; -->
+        <article class="range-box">
+            <p>Length : <span id="length">06</span></p>
+            <div class="input-range">
+                <span>06</span>
+                <input type="range" id="range-input" min="6" max="32" value="06">
+                <span>32</span>
+            </div>
+        </article>
+
+        <!-- Settings -->
+        <div class="setting">
+            <span>Settings</span>
+            <!-- Include Password -->
+            <article class="toggle-box">
+                <label for="uppercase">include uppercase</label>
+                <input type="checkbox" id="uppercase" name="uppercase">
+            </article>
+
+            <!-- Include  uperscae-->
+            <article class="toggle-box">
+                <label for="lowercase">include lowercase</label>
+                <input type="checkbox" id="lowercase" name="lowercase">
+            </article>
+
+            <!-- Include numbers -->
+            <article class="toggle-box">
+                <label for="numbers">include numbers</label>
+                <input type="checkbox" id="numbers" name="numbers">
+            </article>
+
+            <!-- Include symbols -->
+            <article class="toggle-box">
+                <label for="symbols">include symbols</label>
+                <input type="checkbox" id="symbols" name="symbols">
+            </article>
+        </div>
+
+        <div class="btn-box">
+            <button id="generate-btn">generate password</button>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
