@@ -1,4 +1,5 @@
 "use strict";
+
 document.addEventListener("DOMContentLoaded", () => {
   // Selecting Elements;
   const _ = document;

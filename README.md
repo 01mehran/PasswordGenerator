@@ -30,7 +30,7 @@
 ####  Copy to Clipboard: Easily copy the generated password to your clipboard for convenient use.
 
 
-![passwordGeneratore](./img.jpg)
+![passwordGeneratore](./images/img.jpg)
 
 ## [Live Demo](https://password-generator-two-omega-77.vercel.app/)
 
