@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     length.innerText = rangeValue < 10 ? "0" + rangeValue : rangeValue;
   });
 
-
   //---Copy Button;
   function ButtonCopy() {
     copyBtn.style.display = "block";
@@ -71,6 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
       copyBtn.style.display = "none";
       result.value = "";
     }
-  
   });
 });

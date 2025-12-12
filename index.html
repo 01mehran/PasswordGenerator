@@ -1,79 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
-     <link rel="shortcut icon" href="/images/LockIcon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <!-- Title -->
     <title>Password Generator</title>
     <!-- Custom Css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Script -->
     <script src="./app.js" defer></script>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <div class="container">
-        <h2>Password Generator</h2>
+      <h2>Password Generator</h2>
 
-        <!-- Password Box; -->
-        <article class="password-box">
-            <input type="text" placeholder="Select Type of your password" id="result">
-            <span id="copy-btn">Click to copy</span>
+      <!-- Password Box; -->
+      <article class="password-box">
+        <input
+          type="text"
+          placeholder="Select Type of your password"
+          id="result"
+        />
+        <span id="copy-btn">Click to copy</span>
+      </article>
+
+      <!--  Range Input; -->
+      <article class="range-box">
+        <p>Length : <span id="length">06</span></p>
+        <div class="input-range">
+          <span>06</span>
+          <input type="range" id="range-input" min="6" max="32" value="06" />
+          <span>32</span>
+        </div>
+      </article>
+
+      <!-- Settings -->
+      <div class="setting">
+        <span>Settings</span>
+        <!-- Include Password -->
+        <article class="toggle-box">
+          <label for="uppercase">include uppercase</label>
+          <input type="checkbox" id="uppercase" name="uppercase" />
         </article>
 
-        <!--  Range Input; -->
-        <article class="range-box">
-            <p>Length : <span id="length">06</span></p>
-            <div class="input-range">
-                <span>06</span>
-                <input type="range" id="range-input" min="6" max="32" value="06">
-                <span>32</span>
-            </div>
+        <!-- Include  uperscae-->
+        <article class="toggle-box">
+          <label for="lowercase">include lowercase</label>
+          <input type="checkbox" id="lowercase" name="lowercase" />
         </article>
 
-        <!-- Settings -->
-        <div class="setting">
-            <span>Settings</span>
-            <!-- Include Password -->
-            <article class="toggle-box">
-                <label for="uppercase">include uppercase</label>
-                <input type="checkbox" id="uppercase" name="uppercase">
-            </article>
+        <!-- Include numbers -->
+        <article class="toggle-box">
+          <label for="numbers">include numbers</label>
+          <input type="checkbox" id="numbers" name="numbers" />
+        </article>
 
-            <!-- Include  uperscae-->
-            <article class="toggle-box">
-                <label for="lowercase">include lowercase</label>
-                <input type="checkbox" id="lowercase" name="lowercase">
-            </article>
+        <!-- Include symbols -->
+        <article class="toggle-box">
+          <label for="symbols">include symbols</label>
+          <input type="checkbox" id="symbols" name="symbols" />
+        </article>
+      </div>
 
-            <!-- Include numbers -->
-            <article class="toggle-box">
-                <label for="numbers">include numbers</label>
-                <input type="checkbox" id="numbers" name="numbers">
-            </article>
-
-            <!-- Include symbols -->
-            <article class="toggle-box">
-                <label for="symbols">include symbols</label>
-                <input type="checkbox" id="symbols" name="symbols">
-            </article>
-        </div>
-
-        <div class="btn-box">
-            <button id="generate-btn">generate password</button>
-        </div>
-
+      <div class="btn-box">
+        <button id="generate-btn">generate password</button>
+      </div>
     </div>
-
-
-
-
-
-</body>
-
+  </body>
 </html>
