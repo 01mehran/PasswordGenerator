@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //---Copy Button;
   function ButtonCopy() {
     copyBtn.style.display = "block";
+
     copyBtn.addEventListener("click", () => {
       navigator.clipboard.writeText(result.value);
-      copyBtn.textContent = "Coppied";
+      copyBtn.textContent = "Coppied✔";
+
       setTimeout(() => {
         copyBtn.textContent = "Click to copy";
       }, 3000);
