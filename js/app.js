@@ -1,14 +1,15 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Selecting Elements;
-  const _ = document;
-  let result = _.querySelector("#result");
-  const copyBtn = _.querySelector("#copy-btn");
-  const generateBtn = _.querySelector("#generate-btn");
-  const rangeInput = _.querySelector("#range-input");
-  const length = _.querySelector("#length");
+import {
+  _,
+  copyBtn,
+  generateBtn,
+  length,
+  rangeInput,
+  result,
+} from "./domElements.js";
 
+document.addEventListener("DOMContentLoaded", () => {
   //---Input Range;
   rangeInput.addEventListener("input", function () {
     const rangeValue = this.value;
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       for (let i = 0; i < parRangeInput; i++) {
         const randomIndex = Math.trunc(
-          Math.random() * specialCharacters.length
+          Math.random() * specialCharacters.length,
         );
 
         password += specialCharacters[randomIndex];
