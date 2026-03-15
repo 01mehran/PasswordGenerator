@@ -1,6 +1,9 @@
 "use strict";
 
+// components;
 import { copyButton } from "./copyButton.js";
+
+// elements;
 import {
   copyBtn,
   generateBtn,
@@ -13,23 +16,25 @@ import {
   symbol,
 } from "./domElements.js";
 
+// types;
+import {
+  includeUppercase,
+  includeLowercase,
+  includeNumbers,
+  includeSymbols,
+} from "./types.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   //---Input Range;
   rangeInput.addEventListener("input", function () {
     const rangeValue = this.value;
-    length.innerText = rangeValue < 10 ? "0" + rangeValue : rangeValue;
+    length.innerHTML = rangeValue.padStart(2, "0");
   });
 
   // Generate Button;
   generateBtn.addEventListener("click", () => {
     // Convert rangeInput value to Number;
     const parRangeInput = parseInt(rangeInput.value);
-
-    // Declare Four Different Types Of Password;
-    const includeUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const includeLowercase = "abcdefghijklmnopqrstuvwxyz";
-    const includeNumbers = "0123456789";
-    const includeSymbols = "@#$%^&*()_+[]{}|;:,.<>?";
 
     let specialCharacters = "";
 
