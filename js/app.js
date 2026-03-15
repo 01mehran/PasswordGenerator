@@ -1,7 +1,7 @@
 "use strict";
 
+import { copyButton } from "./copyButton.js";
 import {
-  _,
   copyBtn,
   generateBtn,
   length,
@@ -16,30 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
     length.innerText = rangeValue < 10 ? "0" + rangeValue : rangeValue;
   });
 
-  //---Copy Button;
-  function ButtonCopy() {
-    copyBtn.style.display = "block";
-
-    copyBtn.addEventListener("click", () => {
-      navigator.clipboard.writeText(result.value);
-      copyBtn.textContent = "Coppied✔";
-
-      setTimeout(() => {
-        copyBtn.textContent = "Click to copy";
-      }, 3000);
-    });
-  }
-
   // Generate Button;
   generateBtn.addEventListener("click", () => {
     // Convert rangeInput value to Number;
     const parRangeInput = parseInt(rangeInput.value);
 
     // Selectting The Input = [type = checkbox] and is checked or not;
-    const uppercase = _.querySelector("#uppercase").checked;
-    const lowercase = _.querySelector("#lowercase").checked;
-    const number = _.querySelector("#numbers").checked;
-    const symbol = _.querySelector("#symbols").checked;
+    const uppercase = document.querySelector("#uppercase").checked;
+    const lowercase = document.querySelector("#lowercase").checked;
+    const number = document.querySelector("#numbers").checked;
+    const symbol = document.querySelector("#symbols").checked;
 
     // Declare Four Different Types Of Password;
     const includeUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -57,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // If SpecialCharacters Is Not Empty;
     if (specialCharacters) {
       // Show Copy Button;
-      ButtonCopy();
+      copyButton();
 
       let password = "";
 
