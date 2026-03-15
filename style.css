@@ -215,6 +215,7 @@ body {
 
   .container {
     border-radius: 0px;
+    padding: 1.3rem 0.5rem;
   }
 
   .toggle-box {
