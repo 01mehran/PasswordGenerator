@@ -7,6 +7,10 @@ import {
   length,
   rangeInput,
   result,
+  uppercase,
+  lowercase,
+  number,
+  symbol,
 } from "./domElements.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,12 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Convert rangeInput value to Number;
     const parRangeInput = parseInt(rangeInput.value);
 
-    // Selectting The Input = [type = checkbox] and is checked or not;
-    const uppercase = document.querySelector("#uppercase").checked;
-    const lowercase = document.querySelector("#lowercase").checked;
-    const number = document.querySelector("#numbers").checked;
-    const symbol = document.querySelector("#symbols").checked;
-
     // Declare Four Different Types Of Password;
     const includeUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const includeLowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -35,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let specialCharacters = "";
 
-    if (uppercase) specialCharacters += includeUppercase;
-    if (lowercase) specialCharacters += includeLowercase;
-    if (number) specialCharacters += includeNumbers;
-    if (symbol) specialCharacters += includeSymbols;
+    if (uppercase.checked) specialCharacters += includeUppercase;
+    if (lowercase.checked) specialCharacters += includeLowercase;
+    if (number.checked) specialCharacters += includeNumbers;
+    if (symbol.checked) specialCharacters += includeSymbols;
 
     // If SpecialCharacters Is Not Empty;
     if (specialCharacters) {
